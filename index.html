@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		#box {
+			width: 300px;
+			height: 256px;
+			padding-top: 30px;
+			background: #a3adff;
+			position: absolute;
+			right: 10px;
+			bottom: 0;
+			/*display: none;*/
+		}
+
+		a {
+			width: 10px;
+			height: 10px;
+			font-size: 20px;
+			text-decoration: none;
+			color: #000000;
+			position: absolute;
+			right: 10px;
+			top: 0;
+		}
+
+		#container {
+			width: 100%;
+			padding-top: 10px;
+			padding-bottom: 14px;
+			background: #484848;
+		}
+
+		#container span {
+			color: #ffffff;
+		}
+
+		#container div {
+			width: 100%;
+			margin-top: 20px;
+			text-align: center;
+			background-color: #38ff7c;
+		}
+
+		#container h3 {
+			margin-top: 10px;
+			font-size: 30px;
+		}
+
+		#container .left {
+			margin: 0 80px 0 10px;
+		}
+
+		#container .bottom {
+			width: 80%;
+			height: 30px;
+			margin: 20px auto;
+			line-height: 30px;
+			border-radius: 30px;
+			text-align: left;
+		}
+
+		#container .bottom em {
+			margin-left: 20px;
+		}
+
+		#container .bottom span {
+			width: 110px;
+			height: 25px;
+			display: inline-block;
+			background: #595959;
+			padding-left: 10px;
+			margin-left: 10px;
+			margin-top: 3px;
+			line-height: 24px;
+			border-bottom-right-radius: 20px;
+			border-top-right-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+<div id="box">
+	<a href="#">x</a>
+	<div id="container">
+		<span class="left">在线公开课</span>
+		<span class="right">dynatrace</span>
+		<div>运维怎么拿起AI武器</div>
+		<h3>Dynatrace与人工智能运维核心解析实战</h3>
+		<div class="bottom">
+			<em>5-17 20:00</em>
+			<span>即刻报名</span>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+	$('#box').slideUp()
+/*	setTimeout(function () {
+		var TimeOutId;
+		var $box = $('#box');
+		$box.slideDown();
+		TimeOutId = setTimeout(function () {
+			$('#box').slideUp();
+		}, 5000);
+		$('a').click(function () {
+			clearTimeout(TimeOutId);
+			$('#box').slideUp();
+		});
+		$box.hover(function () {
+			console.log('@@');
+			clearTimeout(TimeOutId);
+		}, function () {
+			console.log('@');
+			TimeOutId = setTimeout(function () {
+				$('#box').slideUp();
+			}, 1000);
+		});
+	}, 3000);*/
+
+
+
+</script>
+</body>
+</html>
+

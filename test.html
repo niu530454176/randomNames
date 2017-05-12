@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+
+<script>
+	//所有连续子数组中和最大的值。
+	/*	var arr = [1, -2, -3, 4, 5, -6, 7, 3, 4, 1, 9, 10, 11];
+	 function continuousMaximumSum(arr) {
+	 var sum = 0, result = 0, arr1 = [];
+	 for (var i = 0; i < arr.length; i++) {
+	 if (arr[i] > 0) {
+	 sum += arr[i];
+	 arr1.push(sum);
+	 } else {
+	 sum = 0;
+	 }
+	 }
+	 return Math.max.apply(null, arr1)
+	 }
+	 console.log(continuousMaximumSum(arr));*/
+
+
+	//某餐馆有n张桌子，每张桌子有一个参数：a 可容纳的最大人数；
+	// 有m批客人，每批客人有两个参数:b人数，c预计消费金额。 在不允许拼桌的情况下
+	// ，请实现一个算法选择其中一部分客人，使得总预计消费金额最大
+	/*	var desk = 10, //桌子的总数
+	 deskMaxPeople = 10,//桌子容纳最大人数
+	 items = 8, //一共有多少批客人
+	 peo = [3, 5, 5, 2, 10, 5, 10, 7],//每批客人的人数
+	 money = [100, 100, 100, 100, 100, 100, 100, 100];//每批预计消费金额
+	 function largestConsumption(desk, deskMaxPeople, items, peo, money) {
+	 var arr1 = peo, arr2 = money;
+	 var arr1 = arr1.reduce(function (att, val) {
+	 for (var i = 0; i < arr1.length; i++) {
+	 att[val] = arr2[i];
+	 }
+	 return att;
+	 }, {});
+	 console.log(arr1);
+	 }
+	 console.log(largestConsumption(desk, deskMaxPeople, items, peo, money));*/
+
+	//小青蛙有一天不小心落入了一个地下迷宫,小青蛙希望用自己仅剩的体力值P跳出这个地下迷宫。
+	// 为了让问题简单,假设这是一个n*m的格子迷宫,迷宫每个位置为0或者1,0代表这个位置有障碍物,
+	// 小青蛙达到不了这个位置;1代表小青蛙可以达到的位置。小青蛙初始在(0,0)位置,地下迷宫的
+	// 出口在(0,m-1)(保证这两个位置都是1,并且保证一定有起点到终点可达的路径),小青蛙在迷宫中
+	// 水平移动一个单位距离需要消耗1点体力值,向上爬一个单位距离需要消耗3个单位的体力值,向下
+	// 移动不消耗体力值,当小青蛙的体力值等于0的时候还没有到达出口,小青蛙将无法逃离迷宫。
+	// 现在需要你帮助小青蛙计算出能否用仅剩的体力值跳出迷宫(即达到(0,m-1)位置)。
+
+
+	//输入一个正整数n,求n!(即阶乘)末尾有多少个0？ 比如: n = 10; n! = 3628800,所以答案为2
+	function ridelastZero(number) {
+		var result = 1, num = 0;
+		for (var i = 1; i <= number; i++) {
+			result *= i;
+		}
+		var str = result.toString();
+		if (str.length == 0) {
+			return;
+		}
+		for (var j = str.length; j > 0; j--) {
+			if (str[j] == 0) {
+				num++
+			}
+		}
+		return num;
+	}
+	console.log(ridelastZero(10));
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		.ad {
+			width: 200px;
+			height: 200px;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			display: none;
+		}
+
+		.ad img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.ad span {
+			position: absolute;
+			right: 0;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div id="ad" class="ad">
+	<span id="close">关闭</span>
+	<img src="images/1.jpg" alt="">
+</div>
+<script src="js/jquery.js"></script>
+<script>
+	var $ad = $('#ad');
+	var $close = $('#close');
+	var timeOutId2;
+	var timeOutId1 = setTimeout(function () {
+		$ad.slideToggle();
+	}, 5000)
+
+	$ad.hover(function () {
+		clearTimeout(timeOutId2);
+	}, function () {
+		timeOutId2 = setTimeout(function () {
+			$ad.slideToggle();
+		}, 5000);
+	});
+
+	$close.click(function () {
+		$ad.slideToggle();
+		clearTimeout(timeOutId1);
+		clearTimeout(timeOutId2);
+	})
+
+</script>
+</body>
+</html>
