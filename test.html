@@ -8,8 +8,24 @@
 	<title>Document</title>
 </head>
 <body>
-
+<button id="addBtn">添加按钮</button>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script>
+/*	$.ajax({
+		url: "https://www.taobao.com/go/rgn/sys/xctrl/dispatch.php",
+		data: {
+			murl: 'http://tce.taobao.com/api/mget.htm',
+			src: 'pc',//约定的数据参数，调用来源
+			tce_sid: 827753 //约定的数据参数，sid。 另外提供活动页中另外一些楼层sid供大家练习 827788,834044,827815,827816
+		},
+		jsonpCallback: 'callBackName',
+		dataType: 'jsonp',
+		success: function (data) {
+			console.log(data.result[827753]);
+		}
+	})*/
+
+
 	//所有连续子数组中和最大的值。
 	/*	var arr = [1, -2, -3, 4, 5, -6, 7, 3, 4, 1, 9, 10, 11];
 	 function continuousMaximumSum(arr) {
@@ -57,7 +73,7 @@
 
 
 	//输入一个正整数n,求n!(即阶乘)末尾有多少个0？ 比如: n = 10; n! = 3628800,所以答案为2
-	function ridelastZero(number) {
+/*	function ridelastZero(number) {
 		var result = 1, num = 0;
 		for (var i = 1; i <= number; i++) {
 			result *= i;
@@ -73,7 +89,16 @@
 		}
 		return num;
 	}
-	console.log(ridelastZero(10));
+	console.log(ridelastZero(10));*/
+	$('body').delegate('.btn', 'click', function () {
+		console.log('click了');//事件绑定
+	});
+	$('body').delegate('.btn', 'click');//解绑click事件
+	$('body').delegate();//解绑全部事件
+	$('#addBtn').click(function () {
+		console.log('@@');
+		$('body').append($('<a class = "btn" href="#none">我是a标签</a>'));
+	})
 </script>
 </body>
 </html>
